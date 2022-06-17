@@ -17,7 +17,7 @@ class Login : Fragment(R.layout.activity_login) {
         }
 
         view.findViewById<Button>(R.id.btn_login).setOnClickListener {
-            findNavController().navigate(R.id.action_login_to_emptystate)
+            findNavController().navigate(R.id.action_login_to_activityFragment)
         }
 
     }
