@@ -33,13 +33,5 @@
     <fragment
         android:id="@+id/login"
         android:name="com.example.fitnesstracker.Login"
-        android:label="Login" >
-        <action
-            android:id="@+id/action_login_to_emptystate"
-            app:destination="@id/emptystate" />
-    </fragment>
-    <activity
-        android:id="@+id/emptystate"
-        android:name="com.example.fitnesstracker.Emptystate"
-        android:label="Emptystate" />
+        android:label="Login" />
 </navigation>
