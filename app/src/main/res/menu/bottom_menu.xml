@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/tabsFragment"
-        android:icon="@drawable/ic_person"
+        android:icon="@drawable/ic_sports"
         android:title="Активность"/>
 
     <item android:id="@+id/profileFragment"
-        android:icon="@drawable/ic_sports"
+        android:icon="@drawable/ic_person"
         android:title="Профиль"/>
 
 </menu>

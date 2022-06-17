@@ -21,10 +21,10 @@
         android:label="ProfileFragment" />
     <fragment
         android:id="@+id/myDetalizationFragment"
-        android:name="com.example.fitnesstracker.MyDetalizationFragment"
+        android:name="com.example.myapplication.Detalizations.MyDetalizationFragment"
         android:label="MyDetalizationFragment" />
     <fragment
         android:id="@+id/usersDetalizationFragment"
-        android:name="com.example.fitnesstracker.Detalizations.UsersDetalizationFragment"
+        android:name="com.example.myapplication.Detalizations.UsersDetalizationFragment"
         android:label="UsersDetalizationFragment" />
 </navigation>

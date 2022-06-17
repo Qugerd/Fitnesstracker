@@ -9,5 +9,4 @@ sealed class ListItem(var id:Int){
                val date: String,
                val user: String
                ): ListItem(id)
-
 }
