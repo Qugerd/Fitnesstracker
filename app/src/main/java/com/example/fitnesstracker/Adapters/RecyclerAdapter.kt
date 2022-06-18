@@ -3,14 +3,10 @@ package com.example.fitnesstracker.Adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.fitnesstracker.ActivityFragment
 import com.example.fitnesstracker.ListItem
 import com.example.fitnesstracker.R
 import com.example.myapplication.Detalizations.MyDetalizationFragment
