@@ -2,7 +2,6 @@ package com.example.myapplication.ActivityFragmentTabs
 
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,8 +20,6 @@ class UsersActivity: Fragment(R.layout.tabs_fragment_users_activity)  {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = this@UsersActivity.adapter
         }
-
         adapter.setData(usersActivityData.getData())
     }
-
 }
