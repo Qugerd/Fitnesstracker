@@ -1,12 +1,13 @@
-package com.example.fitnesstracker.fargments
+package com.example.fitnesstracker
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.example.fitnesstracker.R
 
-class FragmentUsers : Fragment(R.layout.activity_fragment_users) {
+class ProfileFragment: Fragment(R.layout.activity_fragment_profile)  {
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
     }
 }
