@@ -25,6 +25,4 @@ class TabsFragment: Fragment(R.layout.activity_fragment_tabs)  {
             tab.text = titles[position]
         }.attach()
     }
-
-
 }
