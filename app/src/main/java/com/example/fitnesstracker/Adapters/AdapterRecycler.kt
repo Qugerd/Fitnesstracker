@@ -35,10 +35,10 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             val text = view.findViewById<TextView>(R.id.userText)
             view.setOnClickListener {
                 if(text.text == ""){
-                    findNavController(view).navigate(R.id.action_tabsFragment_to_myDetalizationFragment,
+                    findNavController(view).navigate(R.id.action_fragmentSwitcher_to_detailsMy,
                         bundleOf(DetailsMy.KEY_NAME to view.id))
                 }else{
-                    findNavController(view).navigate(R.id.action_tabsFragment_to_usersDetalizationFragment,
+                    findNavController(view).navigate(R.id.action_fragmentSwitcher_to_detailsUsers,
                         bundleOf(DetailsUsers.KEY_NAME to view.id))
                 }
             }
