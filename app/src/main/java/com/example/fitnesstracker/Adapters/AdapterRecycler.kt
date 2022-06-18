@@ -9,8 +9,8 @@ import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnesstracker.ListItem
 import com.example.fitnesstracker.R
-import com.example.myapplication.Detalizations.DetailsMy
-import com.example.myapplication.Detalizations.DetailsUsers
+import com.example.fitnesstracker.Details.DetailsMy
+import com.example.fitnesstracker.Details.DetailsUsers
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
