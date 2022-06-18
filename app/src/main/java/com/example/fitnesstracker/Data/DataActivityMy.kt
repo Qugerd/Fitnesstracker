@@ -1,4 +1,4 @@
-package com.example.myapplication.Data
+package com.example.fitnesstracker.Data
 
 import com.example.fitnesstracker.ListItem
 import org.joda.time.DateTime
