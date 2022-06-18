@@ -10,7 +10,7 @@ import com.example.fitnesstracker.R
 import com.example.myapplication.Data.MyActivityDataRepository
 
 
-class RVFragmentMy: Fragment(R.layout.tabs_fragment_my_activity)  {
+class RVFragmentMy: Fragment(R.layout.fragment_switch_my)  {
 
     private val myActivityData = MyActivityDataRepository()
     private val adapter = RecyclerAdapter()
