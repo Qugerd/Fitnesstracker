@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.fitnesstracker.ListItem
 import com.example.fitnesstracker.R
-import com.example.myapplication.Data.MyActivityDataRepository
+import com.example.myapplication.Data.DataActivityMy
 
 class DetailsMy: Fragment(R.layout.activity_fragment_my_detalization) {
 
@@ -19,7 +19,7 @@ class DetailsMy: Fragment(R.layout.activity_fragment_my_detalization) {
         const val KEY_NAME = "name"
     }
 
-    private val myActivityDataRepository = MyActivityDataRepository()
+    private val myActivityDataRepository = DataActivityMy()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
