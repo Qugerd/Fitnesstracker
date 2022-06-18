@@ -9,7 +9,7 @@ import com.example.fitnesstracker.Adapters.ViewPageAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-class FragmentSwitcher: Fragment(R.layout.activity_fragment_tabs)  {
+class FragmentSwitcher: Fragment(R.layout.activity_fragment_switcher)  {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
