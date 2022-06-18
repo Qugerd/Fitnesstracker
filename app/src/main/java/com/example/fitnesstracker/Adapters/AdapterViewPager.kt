@@ -5,8 +5,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.myapplication.ActivityFragmentTabs.RVFragmentMy
 import com.example.myapplication.ActivityFragmentTabs.RVFragmentUsers
 
-public const val ARG_OBJECT = "object"
-
 class ViewPageAdapter(fragment: Fragment): FragmentStateAdapter(fragment) {
     override fun getItemCount(): Int = 2
 

@@ -12,8 +12,6 @@ import com.example.fitnesstracker.R
 import com.example.myapplication.Detalizations.DetailsMy
 import com.example.myapplication.Detalizations.DetailsUsers
 
-var globalId: Int = 1
-
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object{

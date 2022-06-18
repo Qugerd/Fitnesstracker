@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/login"
-        android:name="com.example.fitnesstracker.Login"
+        android:name="com.example.fitnesstracker.LoginPage"
         android:label="Login" >
         <action
             android:id="@+id/action_login_to_activityFragment"
