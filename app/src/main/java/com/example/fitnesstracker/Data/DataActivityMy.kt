@@ -18,9 +18,9 @@ class DataActivityMy {
 
     private val data = listOf<ListItem>(
         ListItem.Date(0, DateTime.now().toString(datePattern)),
-        ListItem.Card(1 , "100 км", "60 мин", "Бег", DateTime.now().toString(datePattern), ""),
+        ListItem.Card(1 , "14.32 км", "2 часа 30 мин", "Бег", DateTime.now().toString(datePattern), ""),
         ListItem.Date(2, DateTime.now().toString(datePattern)),
-        ListItem.Card(3 , "150 км", "90 мин", "Бег", DateTime.now().toString(datePattern), "")
+        ListItem.Card(3 , "228 км", "6 часов", "качели", DateTime.now().toString(datePattern), "")
     )
 
 
