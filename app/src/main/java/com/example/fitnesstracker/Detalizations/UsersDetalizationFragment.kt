@@ -6,15 +6,11 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.setupWithNavController
 import com.example.fitnesstracker.ListItem
 import com.example.fitnesstracker.R
-import com.example.myapplication.Data.MyActivityDataRepository
 import com.example.myapplication.Data.UsersActivityDataRepository
 
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class UsersDetalizationFragment: Fragment(R.layout.activity_fragment_users_detalization) {
 
@@ -43,5 +39,4 @@ class UsersDetalizationFragment: Fragment(R.layout.activity_fragment_users_detal
         view.findViewById<TextView>(R.id.userText).text = activityData.user
         toolbar.title = activityData.moveBy
     }
-
 }
