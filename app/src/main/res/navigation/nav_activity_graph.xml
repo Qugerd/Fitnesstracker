@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/tabsFragment"
-        android:name="com.example.fitnesstracker.TabsFragment"
+        android:name="com.example.fitnesstracker.FragmentSwitcher"
         android:label="TabsFragment" >
         <action
             android:id="@+id/action_tabsFragment_to_myDetalizationFragment"
