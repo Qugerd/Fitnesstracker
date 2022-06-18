@@ -7,7 +7,7 @@
         android:icon="@drawable/ic_sports"/>
 
     <item
-        android:id="@+id/profileFragment"
+        android:id="@+id/profilePage"
         android:title="Профиль"
         android:icon="@drawable/ic_person"/>
 </menu>
