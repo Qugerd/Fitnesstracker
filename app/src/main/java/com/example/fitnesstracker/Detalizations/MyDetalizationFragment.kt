@@ -8,14 +8,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.setupWithNavController
 import com.example.fitnesstracker.ListItem
 import com.example.fitnesstracker.R
 import com.example.myapplication.Data.MyActivityDataRepository
-
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MyDetalizationFragment: Fragment(R.layout.activity_fragment_my_detalization) {
 
@@ -46,7 +42,7 @@ class MyDetalizationFragment: Fragment(R.layout.activity_fragment_my_detalizatio
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.my_detalization_toolbar_menu, menu)
+        inflater.inflate(R.menu.top_details_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
 }
