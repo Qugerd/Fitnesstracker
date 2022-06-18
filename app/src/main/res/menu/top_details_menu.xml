@@ -6,11 +6,11 @@
         android:id="@+id/deleteOption"
         app:showAsAction="ifRoom"
         android:title="Удалить"
-        android:icon="@drawable/ic_baseline_delete_24"/>
+        android:icon="@drawable/ic_delete"/>
 
     <item
         android:id="@+id/shareOption"
         app:showAsAction="ifRoom"
         android:title="Поделиться"
-        android:icon="@drawable/ic_baseline_share_24"/>
+        android:icon="@drawable/ic_share"/>
 </menu>
