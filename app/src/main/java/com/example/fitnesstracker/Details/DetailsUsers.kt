@@ -1,4 +1,4 @@
-package com.example.myapplication.Detalizations
+package com.example.fitnesstracker.Details
 
 import android.os.Bundle
 import android.view.View
@@ -7,10 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.fitnesstracker.Data.DataActivityUsers
 import com.example.fitnesstracker.ListItem
 import com.example.fitnesstracker.R
-import com.example.myapplication.Data.DataActivityUsers
-
 
 class DetailsUsers: Fragment(R.layout.activity_fragment_users_detalization) {
 
