@@ -7,12 +7,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnesstracker.Adapters.RecyclerAdapter
 import com.example.fitnesstracker.R
-import com.example.myapplication.Data.MyActivityDataRepository
+import com.example.myapplication.Data.DataActivityMy
 
 
 class RVFragmentMy: Fragment(R.layout.fragment_switch_my)  {
 
-    private val myActivityData = MyActivityDataRepository()
+    private val myActivityData = DataActivityMy()
     private val adapter = RecyclerAdapter()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
