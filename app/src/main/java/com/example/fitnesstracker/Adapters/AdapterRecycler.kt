@@ -9,8 +9,8 @@ import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnesstracker.ListItem
 import com.example.fitnesstracker.R
-import com.example.myapplication.Detalizations.MyDetalizationFragment
-import com.example.myapplication.Detalizations.UsersDetalizationFragment
+import com.example.myapplication.Detalizations.DetailsMy
+import com.example.myapplication.Detalizations.DetailsUsers
 
 var globalId: Int = 1
 
@@ -38,10 +38,10 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             view.setOnClickListener {
                 if(text.text == ""){
                     findNavController(view).navigate(R.id.action_tabsFragment_to_myDetalizationFragment,
-                        bundleOf(MyDetalizationFragment.KEY_NAME to view.id))
+                        bundleOf(DetailsMy.KEY_NAME to view.id))
                 }else{
                     findNavController(view).navigate(R.id.action_tabsFragment_to_usersDetalizationFragment,
-                        bundleOf(UsersDetalizationFragment.KEY_NAME to view.id))
+                        bundleOf(DetailsUsers.KEY_NAME to view.id))
                 }
             }
             CardViewHolder(view)
