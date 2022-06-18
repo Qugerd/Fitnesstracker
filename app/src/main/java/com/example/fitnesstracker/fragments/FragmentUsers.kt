@@ -1,4 +1,4 @@
-package com.example.fitnesstracker.fragments
+package com.example.fitnesstracker.Fragments
 
 import android.os.Bundle
 import android.view.View
