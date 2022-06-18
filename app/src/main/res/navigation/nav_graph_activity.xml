@@ -2,10 +2,10 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_nav_graph"
-    app:startDestination="@id/tabsFragment">
+    app:startDestination="@id/fragmentSwitcher">
 
     <fragment
-        android:id="@+id/tabsFragment"
+        android:id="@+id/fragmentSwitcher"
         android:name="com.example.fitnesstracker.FragmentSwitcher"
         android:label="TabsFragment" >
         <action
