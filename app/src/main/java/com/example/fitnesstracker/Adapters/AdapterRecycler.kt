@@ -82,7 +82,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             distanceText.text = card.distance
             userText.text = card.user
             timeText.text = card.time
-            movingByText.text = card.moveBy
+            movingByText.text = card.kindSport
             dateText.text = card.date
         }
     }
