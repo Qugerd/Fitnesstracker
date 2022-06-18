@@ -36,6 +36,6 @@ class DetailsUsers: Fragment(R.layout.activity_fragment_users_detalization) {
         view.findViewById<TextView>(R.id.timeText).text = activityData.time
         view.findViewById<TextView>(R.id.dateText).text = activityData.date
         view.findViewById<TextView>(R.id.userText).text = activityData.user
-        toolbar.title = activityData.moveBy
+        toolbar.title = activityData.kindSport
     }
 }
