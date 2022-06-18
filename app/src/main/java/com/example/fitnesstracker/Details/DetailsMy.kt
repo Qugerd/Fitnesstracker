@@ -38,7 +38,7 @@ class DetailsMy: Fragment(R.layout.activity_fragment_my_detalization) {
         view.findViewById<TextView>(R.id.distanceText).text = activityData.distance
         view.findViewById<TextView>(R.id.timeText).text = activityData.time
         view.findViewById<TextView>(R.id.dateText).text = activityData.date
-        toolbar.title = activityData.moveBy
+        toolbar.title = activityData.kindSport
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
