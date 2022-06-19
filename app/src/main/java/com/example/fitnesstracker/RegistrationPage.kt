@@ -19,7 +19,7 @@ class RegistrationPage : Fragment(R.layout.fragment_registration_page)  {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Button>(R.id.btn_reg).setOnClickListener {
-            findNavController().navigate(R.id.action_registrationPage_to_login)
+            findNavController().navigate(R.id.action_registrationPage_to_activityFragment)
         }
 
         val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
