@@ -120,7 +120,7 @@
             </RadioGroup>
 
             <Button
-                android:id="@+id/btn_reg"
+                android:id="@+id/registrationButton"
                 android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:layout_margin="16dp"
