@@ -14,7 +14,6 @@ class DataActivityMy {
         ListItem.Card(3 , "228 км", "6 часов", "качели", DateTime.now().toString(dateFormat), "")
     )
 
-
     fun getData() = data
 
     private fun getMaxId() = data.maxOf{it.id}
