@@ -5,7 +5,7 @@ sealed class ListItem(var id:Int){
     class Card(id: Int,
                val distance: String,
                val time: String,
-               val moveBy: String,
+               val kindSport: String,
                val date: String,
                val user: String
                ): ListItem(id)

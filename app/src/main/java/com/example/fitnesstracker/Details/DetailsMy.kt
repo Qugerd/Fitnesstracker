@@ -1,4 +1,4 @@
-package com.example.myapplication.Detalizations
+package com.example.fitnesstracker.Details
 
 import android.os.Bundle
 import android.view.Menu
@@ -9,9 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.fitnesstracker.Data.DataActivityMy
 import com.example.fitnesstracker.ListItem
 import com.example.fitnesstracker.R
-import com.example.myapplication.Data.MyActivityDataRepository
 
 class DetailsMy: Fragment(R.layout.activity_fragment_my_detalization) {
 
@@ -19,7 +19,7 @@ class DetailsMy: Fragment(R.layout.activity_fragment_my_detalization) {
         const val KEY_NAME = "name"
     }
 
-    private val myActivityDataRepository = MyActivityDataRepository()
+    private val myActivityDataRepository = DataActivityMy()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -38,7 +38,7 @@ class DetailsMy: Fragment(R.layout.activity_fragment_my_detalization) {
         view.findViewById<TextView>(R.id.distanceText).text = activityData.distance
         view.findViewById<TextView>(R.id.timeText).text = activityData.time
         view.findViewById<TextView>(R.id.dateText).text = activityData.date
-        toolbar.title = activityData.moveBy
+        toolbar.title = activityData.kindSport
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
