@@ -11,7 +11,7 @@ import com.example.fitnesstracker.R
 class PresenterRegistration {
 
 
-    private var view: ViewRegistration? = null
+    private var viewRegistration: ViewRegistration? = null
     private var navController: NavController? = null
     private val loginService = LoginService()
 
@@ -20,38 +20,38 @@ class PresenterRegistration {
     }
 
     fun attachView(view: ViewRegistration){
-        this.view = view
+        this.viewRegistration = view
     }
 
     fun detachView(){
-        this.view = null
+        this.viewRegistration = null
     }
 
     fun onRegistrationClicked(login: String, password: String, passwordRepeat: String, name: String,
         gender: Int, sharedPrefs: SharedPreferences){
 
         if(login.isBlank()){
-            view?.showLoginError()
+            viewRegistration?.showLoginError()
             return
         }
 
         if(password.isBlank()){
-            view?.showPasswordError()
+            viewRegistration?.showPasswordError()
             return
         }
 
         if(name.isBlank()){
-            view?.showNameError()
+            viewRegistration?.showNameError()
             return
         }
 
         if (!(gender == 0 || gender == 1 || gender == 2)){
-            view?.showToast("Пол не выбран")
+            viewRegistration?.showToast("Выберите пол")
             return
         }
 
         if(password != passwordRepeat){
-            view?.showToast("Пароли не совпадают")
+            viewRegistration?.showToast("Пароли не совпадают")
         }
 
         loginService.register(login, password, name, gender, object : LoginService.LoginCallback{
@@ -61,7 +61,7 @@ class PresenterRegistration {
             }
 
             override fun onError(error: Throwable) {
-                view?.showToast(error.toString())
+                viewRegistration?.showToast(error.toString())
             }
         })
     }
