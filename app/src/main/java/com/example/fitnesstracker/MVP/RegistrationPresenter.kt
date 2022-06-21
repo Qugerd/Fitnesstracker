@@ -36,13 +36,13 @@ class RegistrationPresenter {
             return
         }
 
-        if(password.isBlank()){
-            view?.showPasswordError()
+        if(name.isBlank()){
+            view?.showNameError()
             return
         }
 
-        if(name.isBlank()){
-            view?.showNameError()
+        if(password.isBlank()){
+            view?.showPasswordError()
             return
         }
 

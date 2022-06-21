@@ -10,11 +10,11 @@ class DataActivityUsers {
 
     private val data = listOf<ListItem>(
         ListItem.Date(0, DateTime.now().toString(dateFormat)),
-        ListItem.Card(1 , "322 км", "10 мин", "Бег", DateTime.now().toString(dateFormat), "@Он"),
+        ListItem.Card(1 , "@он", "Бег", "322 км", "10 мин", DateTime.now().toString(dateFormat)),
         ListItem.Date(2, DateTime.now().toString(dateFormat)),
-        ListItem.Card(3 , "1 км", "3 мин", "серфинг", DateTime.now().toString(dateFormat), "@она"),
+        ListItem.Card(3 , "@она", "серфинг", "1 км", "3 мин", DateTime.now().toString(dateFormat)),
         ListItem.Date(4, DateTime.now().toString(dateFormat)),
-        ListItem.Card(5 , "12 км", "23 мин", "флекс", DateTime.now().toString(dateFormat), "@Путин")
+        ListItem.Card(5 , "@Путин", "флекс", "12 км", "23 мин", DateTime.now().toString(dateFormat))
     )
 
     fun getData() = data

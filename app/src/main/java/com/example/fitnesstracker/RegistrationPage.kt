@@ -101,13 +101,14 @@ class RegistrationPage : Fragment(R.layout.fragment_registration_page), Registra
         view?.findViewById<TextInputLayout>(R.id.login)?.error = "Введите логин"
     }
 
+    override fun showNameError() {
+        view?.findViewById<TextInputLayout>(R.id.name)?.error = "Введите имя"
+    }
+
     override fun showPasswordError() {
         view?.findViewById<TextInputLayout>(R.id.password)?.error = "Введите пароль"
     }
 
-    override fun showNameError() {
-        view?.findViewById<TextInputLayout>(R.id.name)?.error = "Введите имя"
-    }
 
     override fun showToast(message: String) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
