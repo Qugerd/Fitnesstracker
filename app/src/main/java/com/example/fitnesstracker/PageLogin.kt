@@ -8,14 +8,14 @@ import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.fitnesstracker.MVP.LoginPresenter
-import com.example.fitnesstracker.MVP.LoginView
+import com.example.fitnesstracker.MVP.PresenterLogin
+import com.example.fitnesstracker.MVP.ViewLogin
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
-class LoginPage : Fragment(R.layout.fragment_login), LoginView {
+class PageLogin : Fragment(R.layout.fragment_login), ViewLogin {
 
-    private val presenter = LoginPresenter()
+    private val presenter = PresenterLogin()
 
     private val sharedPrefs by lazy {
         requireContext().getSharedPreferences("Tokens", Context.MODE_PRIVATE)

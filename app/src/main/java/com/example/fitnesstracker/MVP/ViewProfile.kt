@@ -1,6 +1,6 @@
 package com.example.fitnesstracker.MVP
 
-interface ProfileView {
+interface ViewProfile {
 
     fun showToast(message: String)
 

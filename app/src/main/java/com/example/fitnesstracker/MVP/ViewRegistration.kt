@@ -1,6 +1,6 @@
 package com.example.fitnesstracker.MVP
 
-interface RegistrationView {
+interface ViewRegistration {
 
     fun showLoginError()
 

@@ -7,9 +7,9 @@ import com.example.fitnesstracker.Network.LoginService
 import com.example.fitnesstracker.R
 
 
-class RegistrationPresenter {
+class PresenterRegistration {
 
-    private var view: RegistrationView? = null
+    private var viewRegistration: ViewRegistration? = null
     private var navController: NavController? = null
     private val loginService = LoginService()
 
@@ -17,12 +17,12 @@ class RegistrationPresenter {
         this.navController = contr
     }
 
-    fun attachView(view: RegistrationView){
-        this.view = view
+    fun attachView(viewRegistration: ViewRegistration){
+        this.viewRegistration = viewRegistration
     }
 
     fun detachView(){
-        this.view = null
+        this.viewRegistration = null
     }
 
     fun onRegistrationClicked(
@@ -32,33 +32,33 @@ class RegistrationPresenter {
         gender: Int
     ){
         if(login.isBlank()){
-            view?.showLoginError()
+            viewRegistration?.showLoginError()
             return
         }
 
         if(name.isBlank()){
-            view?.showNameError()
+            viewRegistration?.showNameError()
             return
         }
 
         if(password.isBlank()){
-            view?.showPasswordError()
+            viewRegistration?.showPasswordError()
             return
         }
 
         if (!(gender == 0 || gender == 1 || gender == 2)){
-            view?.showToast("Выберите пол")
+            viewRegistration?.showToast("Выберите пол")
             return
         }
 
         loginService.register(login, password, name, gender, object : LoginService.LoginCallback{
             override fun onSuccess(result: RegisterDTO) {
-                view?.saveToken(result.token)
+                viewRegistration?.saveToken(result.token)
                 navController?.navigate(R.id.action_registrationPage_to_activityFragment)
             }
 
             override fun onError(error: Throwable) {
-                view?.showToast(error.toString())
+                viewRegistration?.showToast(error.toString())
             }
 
         })

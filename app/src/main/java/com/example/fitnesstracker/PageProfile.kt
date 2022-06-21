@@ -9,12 +9,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import com.example.fitnesstracker.MVP.ProfilePresenter
-import com.example.fitnesstracker.MVP.ProfileView
+import com.example.fitnesstracker.MVP.PresenterProfile
+import com.example.fitnesstracker.MVP.ViewProfile
 
-class ProfilePage: Fragment(R.layout.activity_fragment_profile), ProfileView {
+class PageProfile: Fragment(R.layout.activity_fragment_profile), ViewProfile {
 
-    private val presenter = ProfilePresenter()
+    private val presenter = PresenterProfile()
     private var navController: NavController? = null
 
     private val sharedPrefs by lazy {

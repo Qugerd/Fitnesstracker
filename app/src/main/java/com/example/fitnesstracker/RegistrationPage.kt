@@ -16,14 +16,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.fitnesstracker.MVP.RegistrationPresenter
-import com.example.fitnesstracker.MVP.RegistrationView
+import com.example.fitnesstracker.MVP.PresenterRegistration
+import com.example.fitnesstracker.MVP.ViewRegistration
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
-class RegistrationPage : Fragment(R.layout.fragment_registration_page), RegistrationView  {
+class RegistrationPage : Fragment(R.layout.fragment_registration_page), ViewRegistration  {
 
-    private val presenter = RegistrationPresenter()
+    private val presenter = PresenterRegistration()
 
     private val sharedPrefs by lazy {
         requireContext().getSharedPreferences("Tokens", Context.MODE_PRIVATE)
@@ -40,7 +40,6 @@ class RegistrationPage : Fragment(R.layout.fragment_registration_page), Registra
         (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         toolbar.setNavigationOnClickListener {
-            findNavController().navigateUp()
         }
 
         view.findViewById<Button>(R.id.registrationButton).setOnClickListener {
