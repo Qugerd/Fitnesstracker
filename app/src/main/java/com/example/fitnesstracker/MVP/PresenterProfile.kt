@@ -33,7 +33,7 @@ class PresenterProfile {
     fun onViewCreated(token: String){
         loginService.profile("Bearer $token", object : LoginService.ProfileCallback{
             override fun onSuccess(result: UserDTO) {
-                viewProfile?.getData(result.name, result.login, token)
+                viewProfile?.getData(result.name, result.login)
             }
 
             override fun onError(error: Throwable) {

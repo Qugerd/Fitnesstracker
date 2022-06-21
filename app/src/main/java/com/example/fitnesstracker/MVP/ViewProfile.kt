@@ -6,8 +6,7 @@ interface ViewProfile {
 
     fun getData(
         name: String,
-        login: String,
-        token: String
+        login: String
     )
 
 }

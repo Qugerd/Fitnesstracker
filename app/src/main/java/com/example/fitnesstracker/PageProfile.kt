@@ -47,7 +47,7 @@ class PageProfile: Fragment(R.layout.activity_fragment_profile), ViewProfile {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show()
     }
 
-    override fun getData(name: String, login: String, token: String) {
+    override fun getData(name: String, login: String) {
         view?.findViewById<TextView>(R.id.name)?.text = name
         view?.findViewById<TextView>(R.id.login)?.text = login
 
