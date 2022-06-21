@@ -4,9 +4,9 @@ interface RegistrationView {
 
     fun showLoginError()
 
-    fun showNameError()
-
     fun showPasswordError()
+
+    fun showNameError()
 
     fun showToast(message: String)
 
