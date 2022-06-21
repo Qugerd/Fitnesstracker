@@ -50,8 +50,7 @@ class RegistrationPage : Fragment(R.layout.fragment_registration_page), ViewRegi
                 view.findViewById<TextInputEditText>(R.id.passwordRepeatInput).text.toString(),
                 view.findViewById<TextInputEditText>(R.id.nameInput).text.toString(),
                 view.findViewById<RadioGroup>(R.id.genderGroup).checkedRadioButtonId - 1,
-                sharedPrefs
-            )
+                sharedPrefs)
         }
 
         val textViewAgreement = view.findViewById<TextView>(R.id.agreement)
@@ -95,12 +94,12 @@ class RegistrationPage : Fragment(R.layout.fragment_registration_page), ViewRegi
         view?.findViewById<TextInputLayout>(R.id.login)?.error = "Введите логин"
     }
 
-    override fun showPasswordError() {
-        view?.findViewById<TextInputLayout>(R.id.password)?.error = "Введите пароль"
-    }
-
     override fun showNameError() {
         view?.findViewById<TextInputLayout>(R.id.name)?.error = "Введите имя"
+    }
+
+    override fun showPasswordError() {
+        view?.findViewById<TextInputLayout>(R.id.password)?.error = "Введите пароль"
     }
 
     override fun showToast(message: String) {

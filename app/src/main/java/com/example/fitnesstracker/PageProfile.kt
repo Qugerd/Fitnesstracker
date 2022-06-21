@@ -50,6 +50,5 @@ class PageProfile: Fragment(R.layout.activity_fragment_profile), ViewProfile {
     override fun getData(name: String, login: String) {
         view?.findViewById<TextView>(R.id.name)?.text = name
         view?.findViewById<TextView>(R.id.login)?.text = login
-
     }
 }

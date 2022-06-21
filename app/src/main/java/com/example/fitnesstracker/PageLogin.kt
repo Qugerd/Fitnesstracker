@@ -35,8 +35,7 @@ class PageLogin : Fragment(R.layout.fragment_login), ViewLogin {
             presenter.onLoginClicked(
                 view.findViewById<TextInputEditText>(R.id.loginInput).text.toString(),
                 view.findViewById<TextInputEditText>(R.id.passwordInput).text.toString(),
-                sharedPrefs
-            )
+                sharedPrefs)
         }
     }
 
