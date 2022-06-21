@@ -92,6 +92,7 @@ class RegistrationPage : Fragment(R.layout.fragment_registration_page), ViewRegi
 
     override fun showLoginError() {
         view?.findViewById<TextInputLayout>(R.id.login)?.error = "Введите логин"
+
     }
 
     override fun showNameError() {
