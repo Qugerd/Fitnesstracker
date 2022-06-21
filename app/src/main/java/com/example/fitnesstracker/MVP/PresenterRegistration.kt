@@ -10,7 +10,8 @@ import com.example.fitnesstracker.R
 
 class PresenterRegistration {
 
-    private var viewRegistration: ViewRegistration? = null
+
+    private var view: ViewRegistration? = null
     private var navController: NavController? = null
     private val loginService = LoginService()
 
@@ -18,44 +19,39 @@ class PresenterRegistration {
         this.navController = contr
     }
 
-    fun attachView(viewRegistration: ViewRegistration){
-        this.viewRegistration = viewRegistration
+    fun attachView(view: ViewRegistration){
+        this.view = view
     }
 
     fun detachView(){
-        this.viewRegistration = null
+        this.view = null
     }
 
-    fun onRegistrationClicked(
-        login: String,
-        password: String,
-        passwordRepeat: String,
-        name: String,
-        gender: Int,
-        sharedPrefs: SharedPreferences
-    ){
-        if(login.isBlank()){
-            viewRegistration?.showLoginError()
-            return
-        }
+    fun onRegistrationClicked(login: String, password: String, passwordRepeat: String, name: String,
+        gender: Int, sharedPrefs: SharedPreferences){
 
-        if(name.isBlank()){
-            viewRegistration?.showNameError()
+        if(login.isBlank()){
+            view?.showLoginError()
             return
         }
 
         if(password.isBlank()){
-            viewRegistration?.showPasswordError()
+            view?.showPasswordError()
+            return
+        }
+
+        if(name.isBlank()){
+            view?.showNameError()
             return
         }
 
         if (!(gender == 0 || gender == 1 || gender == 2)){
-            viewRegistration?.showToast("Выберите пол")
+            view?.showToast("Пол не выбран")
             return
         }
 
         if(password != passwordRepeat){
-            viewRegistration?.showToast("Пароли не совпадают")
+            view?.showToast("Пароли не совпадают")
         }
 
         loginService.register(login, password, name, gender, object : LoginService.LoginCallback{
@@ -65,11 +61,8 @@ class PresenterRegistration {
             }
 
             override fun onError(error: Throwable) {
-                viewRegistration?.showToast(error.toString())
+                view?.showToast(error.toString())
             }
-
         })
     }
-
-
 }

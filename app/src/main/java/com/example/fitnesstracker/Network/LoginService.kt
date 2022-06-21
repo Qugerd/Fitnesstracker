@@ -24,8 +24,8 @@ class LoginService {
             .enqueue(object : Callback<RegisterDTO> {
                 override fun onResponse(call: Call<RegisterDTO>, response: Response<RegisterDTO>) {
                     if (response.isSuccessful) response.body()?.let { callback.onSuccess(it) }
-                        ?: callback.onError(IOException("Server returned error"))
-                    else callback.onError(IOException("Empty body"))
+                        ?: callback.onError(IOException("Exception"))
+                    else callback.onError(IOException("Exception"))
                 }
 
                 override fun onFailure(call: Call<RegisterDTO>, t: Throwable) {
@@ -44,8 +44,8 @@ class LoginService {
             .enqueue(object : Callback<RegisterDTO>{
                 override fun onResponse(call: Call<RegisterDTO>, response: Response<RegisterDTO>) {
                     if(response.isSuccessful) response.body()?.let { callback.onSuccess(it) }
-                        ?: callback.onError(IOException("Server returned error"))
-                    else callback.onError(IOException("Empty body"))
+                        ?: callback.onError(IOException("Exception"))
+                    else callback.onError(IOException("Exception"))
                 }
 
                 override fun onFailure(call: Call<RegisterDTO>, t: Throwable) {
@@ -76,8 +76,8 @@ class LoginService {
             .enqueue(object : Callback<UserDTO>{
                 override fun onResponse(call: Call<UserDTO>, response: Response<UserDTO>) {
                     if(response.isSuccessful) response.body()?.let { callback.onSuccess(it) }
-                        ?: callback.onError(IOException("Server returned error"))
-                    else callback.onError(IOException("Empty body"))
+                        ?: callback.onError(IOException("Exception"))
+                    else callback.onError(IOException("Exception"))
                 }
 
                 override fun onFailure(call: Call<UserDTO>, t: Throwable) {

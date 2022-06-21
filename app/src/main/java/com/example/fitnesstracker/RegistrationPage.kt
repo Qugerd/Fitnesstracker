@@ -50,13 +50,14 @@ class RegistrationPage : Fragment(R.layout.fragment_registration_page), ViewRegi
                 view.findViewById<TextInputEditText>(R.id.passwordRepeatInput).text.toString(),
                 view.findViewById<TextInputEditText>(R.id.nameInput).text.toString(),
                 view.findViewById<RadioGroup>(R.id.genderGroup).checkedRadioButtonId - 1,
-                sharedPrefs)
+                sharedPrefs
+            )
         }
 
-        val textView = view.findViewById<TextView>(R.id.agreement)
-        val string_agreement = SpannableString("Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и обработки персональных данных, а также принимаете пользовательское соглашение")
+        val textViewAgreement = view.findViewById<TextView>(R.id.agreement)
+        val str = SpannableString("Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и обработки персональных данных, а также принимаете пользовательское соглашение")
 
-        val SpanPolitic: ClickableSpan = object : ClickableSpan() {
+        val clickableSpan1: ClickableSpan = object : ClickableSpan() {
             override fun onClick(widget: View) {
                 showToast("Политика конфиденциальности")
             }
@@ -67,7 +68,7 @@ class RegistrationPage : Fragment(R.layout.fragment_registration_page), ViewRegi
             }
         }
 
-        val SpanAgree: ClickableSpan = object : ClickableSpan() {
+        val clickableSpan2: ClickableSpan = object : ClickableSpan() {
             override fun onClick(widget: View) {
                 showToast("Пользовательское соглашение")
             }
@@ -78,13 +79,12 @@ class RegistrationPage : Fragment(R.layout.fragment_registration_page), ViewRegi
             }
         }
 
-        string_agreement.setSpan(SpanPolitic, 37, 65, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-        string_agreement.setSpan(SpanAgree, 118, 145, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        str.setSpan(clickableSpan1, 37, 65, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        str.setSpan(clickableSpan2, 118, 145, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-        textView.text = string_agreement
-        textView.movementMethod = LinkMovementMethod.getInstance()
+        textViewAgreement.text = str
+        textViewAgreement.movementMethod = LinkMovementMethod.getInstance()
     }
-
 
     override fun onDestroyView() {
         presenter.detachView()
