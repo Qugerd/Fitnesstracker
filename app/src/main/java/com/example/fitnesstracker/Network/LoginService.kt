@@ -35,11 +35,8 @@ class LoginService {
             })
     }
 
-    fun login(
-        login:String,
-        password:String,
-        callback:LoginCallback
-    ){
+    fun login(login:String, password:String, callback:LoginCallback){
+
         loginApi.login(login, password)
             .enqueue(object : Callback<RegisterDTO>{
                 override fun onResponse(call: Call<RegisterDTO>, response: Response<RegisterDTO>) {
