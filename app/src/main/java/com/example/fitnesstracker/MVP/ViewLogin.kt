@@ -7,7 +7,4 @@ interface ViewLogin {
     fun showPasswordError()
 
     fun showToast(message: String)
-
-    fun saveToken(token: String)
-
 }

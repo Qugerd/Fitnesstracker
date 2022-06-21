@@ -1,7 +1,10 @@
 package com.example.fitnesstracker.MVP
 
+import android.content.SharedPreferences
+import androidx.navigation.NavController
 import com.example.fitnesstracker.DTO.UserDTO
 import com.example.fitnesstracker.Network.LoginService
+import com.example.fitnesstracker.R
 
 
 class PresenterProfile {
@@ -17,8 +20,8 @@ class PresenterProfile {
         this.viewProfile = null
     }
 
-    fun onLogoutClicked(){
-        loginService.logout("Bearer " + viewProfile?.getToken().toString(), object : LoginService.LogoutCallback{
+    fun onLogoutClicked(token: String){
+        loginService.logout("Bearer $token", object : LoginService.LogoutCallback{
             override fun onSuccess() {
             }
 
@@ -27,16 +30,21 @@ class PresenterProfile {
         })
     }
 
-    fun onViewCreated(){
-        loginService.profile("Bearer " + viewProfile?.getToken().toString(), object : LoginService.ProfileCallback{
+    fun onViewCreated(token: String){
+        loginService.profile("Bearer $token", object : LoginService.ProfileCallback{
             override fun onSuccess(result: UserDTO) {
-                viewProfile?.getData(result.name, result.login, viewProfile?.getToken().toString())
+                viewProfile?.getData(result.name, result.login, token)
             }
 
             override fun onError(error: Throwable) {
                 viewProfile?.showToast(error.toString())
             }
         })
+    }
+
+    fun deleteToken(sharedPrefs: SharedPreferences, navController: NavController){
+        sharedPrefs.edit().remove("Token").apply()
+        navController.navigate(R.id.action_activityFragment_to_welcomePage)
     }
 
 }

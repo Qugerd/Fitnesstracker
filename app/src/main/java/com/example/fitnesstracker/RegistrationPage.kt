@@ -40,19 +40,17 @@ class RegistrationPage : Fragment(R.layout.fragment_registration_page), ViewRegi
         (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp()
         }
 
         view.findViewById<Button>(R.id.registrationButton).setOnClickListener {
-            if(view.findViewById<TextInputEditText>(R.id.passwordInput).text.toString() == view.findViewById<TextInputEditText>(R.id.passwordRepeatInput).text.toString()) {
-                presenter.onRegistrationClicked(
-                    view.findViewById<TextInputEditText>(R.id.loginInput).text.toString(),
-                    view.findViewById<TextInputEditText>(R.id.passwordInput).text.toString(),
-                    view.findViewById<TextInputEditText>(R.id.nameInput).text.toString(),
-                    view.findViewById<RadioGroup>(R.id.genderGroup).checkedRadioButtonId - 1
-                )
-            }
-            else
-                showToast("Пароли не совпадают")
+            presenter.onRegistrationClicked(
+                view.findViewById<TextInputEditText>(R.id.loginInput).text.toString(),
+                view.findViewById<TextInputEditText>(R.id.passwordInput).text.toString(),
+                view.findViewById<TextInputEditText>(R.id.passwordRepeatInput).text.toString(),
+                view.findViewById<TextInputEditText>(R.id.nameInput).text.toString(),
+                view.findViewById<RadioGroup>(R.id.genderGroup).checkedRadioButtonId - 1,
+                sharedPrefs)
         }
 
         val textView = view.findViewById<TextView>(R.id.agreement)
@@ -87,9 +85,6 @@ class RegistrationPage : Fragment(R.layout.fragment_registration_page), ViewRegi
         textView.movementMethod = LinkMovementMethod.getInstance()
     }
 
-    override fun saveToken(token: String) {
-        sharedPrefs.edit().putString("Token", token).apply()
-    }
 
     override fun onDestroyView() {
         presenter.detachView()

@@ -9,7 +9,4 @@ interface ViewRegistration {
     fun showNameError()
 
     fun showToast(message: String)
-
-    fun saveToken(token: String)
-
 }

@@ -1,6 +1,7 @@
 package com.example.fitnesstracker.MVP
 
 
+import android.content.SharedPreferences
 import androidx.navigation.NavController
 import com.example.fitnesstracker.DTO.RegisterDTO
 import com.example.fitnesstracker.Network.LoginService
@@ -28,8 +29,10 @@ class PresenterRegistration {
     fun onRegistrationClicked(
         login: String,
         password: String,
+        passwordRepeat: String,
         name: String,
-        gender: Int
+        gender: Int,
+        sharedPrefs: SharedPreferences
     ){
         if(login.isBlank()){
             viewRegistration?.showLoginError()
@@ -51,9 +54,13 @@ class PresenterRegistration {
             return
         }
 
+        if(password != passwordRepeat){
+            viewRegistration?.showToast("Пароли не совпадают")
+        }
+
         loginService.register(login, password, name, gender, object : LoginService.LoginCallback{
             override fun onSuccess(result: RegisterDTO) {
-                viewRegistration?.saveToken(result.token)
+                sharedPrefs.edit()?.putString("Token", result.token)?.apply()
                 navController?.navigate(R.id.action_registrationPage_to_activityFragment)
             }
 

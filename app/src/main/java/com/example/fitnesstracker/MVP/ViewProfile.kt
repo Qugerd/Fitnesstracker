@@ -4,8 +4,6 @@ interface ViewProfile {
 
     fun showToast(message: String)
 
-    fun getToken():String?
-
     fun getData(
         name: String,
         login: String,

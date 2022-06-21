@@ -1,5 +1,6 @@
 package com.example.fitnesstracker.MVP
 
+import android.content.SharedPreferences
 import androidx.navigation.NavController
 import com.example.fitnesstracker.DTO.RegisterDTO
 import com.example.fitnesstracker.Network.LoginService
@@ -23,7 +24,7 @@ class PresenterLogin {
         this.viewLogin = null
     }
 
-    fun onLoginClicked(login: String, password: String){
+    fun onLoginClicked(login: String, password: String, sharedPrefs: SharedPreferences){
         if(login.isBlank()){
             viewLogin?.showLoginError()
             return
@@ -36,7 +37,7 @@ class PresenterLogin {
 
         loginService.login(login, password, object : LoginService.LoginCallback{
             override fun onSuccess(result: RegisterDTO) {
-                viewLogin?.saveToken(result.token)
+                sharedPrefs.edit()?.putString("Token", result.token)?.apply()
                 navController?.navigate(R.id.action_login_to_activityFragment)
             }
 

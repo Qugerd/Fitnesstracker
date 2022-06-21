@@ -29,22 +29,13 @@ class PageProfile: Fragment(R.layout.activity_fragment_profile), ViewProfile {
 
         presenter.attachView(this)
 
-        presenter.onViewCreated()
+        presenter.onViewCreated(sharedPrefs.getString("Token", "").toString())
 
         view.findViewById<Button>(R.id.logoutButton).setOnClickListener {
-            presenter.onLogoutClicked()
-            deleteToken(navController!!)
+            presenter.onLogoutClicked(sharedPrefs.getString("Token", "").toString())
+            presenter.deleteToken(sharedPrefs, navController!!)
         }
 
-    }
-
-    fun deleteToken(navController: NavController) {
-        sharedPrefs.edit().remove("Token").apply()
-        navController.navigate(R.id.action_activityFragment_to_welcomePage)
-    }
-
-    override fun getToken(): String? {
-        return sharedPrefs.getString("Token", "")
     }
 
     override fun onDestroyView() {
